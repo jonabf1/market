@@ -13,4 +13,5 @@ public abstract class ProductMapper {
 
    @Mapping(source = "price", target = "price", defaultValue = "0")
    public abstract Product mapFrom(ProductDto productDto);
+
 }

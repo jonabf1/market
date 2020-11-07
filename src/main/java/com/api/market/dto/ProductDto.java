@@ -7,15 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ProductDto {
-    @NotBlank
+    @NotNull
     private String title;
-    @NotBlank
+    @NotBlank @NotNull
     private String type;
     private String price;
 }
