@@ -21,12 +21,7 @@ public class ProductValidator extends AbstractValidator<ProductDto> {
                 .must(greaterThan("0"))
                      .when(not(nullValue()))
                      .withMessage("O preço deve ser no mínimo maior que '0'")
-                     .withFieldName("price")
-                .must(nullValue())
-                      .when(not(nullValue()))
-                      .withMessage("Campo com formato inválido")
-                      .withFieldName("price")
-                      .critical();
+                     .withFieldName("price");
 
         ruleFor(ProductDto::getTitle)
                 .must(not(StringPredicate.stringEmptyOrNull()))
